@@ -1,5 +1,5 @@
 {
-  "name": "http-cookie",
+  "name": "http-cookie-manager",
   "version": "1.0.0",
   "description": "Highly tested. Parses cookies, then stores them. Provides formatting for response header.",
   "main": "lib/cookie-parser.js",

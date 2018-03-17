@@ -3,7 +3,7 @@
 <a href="https://codecov.io/gh/Tabaci/http-cookie"><img src="https://codecov.io/gh/Tabaci/http-cookie/branch/master/graph/badge.svg" /></a>
 </p>
 
-# http-cookie
+# http-cookie-manager
 
 This *npm* module parses a cookie string from either a request or a plain string 
 and provides formatting for setting the `Set-Cookie` headers.
@@ -11,7 +11,7 @@ and provides formatting for setting the `Set-Cookie` headers.
 ## Installation
 
 ```javascript
-npm install http-cookie
+npm install http-cookie-manager
 ```
 
 ## Usage
@@ -21,7 +21,7 @@ thus retrieving a `CookieManager`, from which we can add more cookies,
 modify cookies and format the `Set-Cookie` headers:
 
 ```javascript
-const parser = require('http-cookie')
+const parser = require('http-cookie-manager')
 let manager
 
 // Parse from an http.IncomingMessage
@@ -155,7 +155,7 @@ manager.createHeaders()
 ## Full Example
 
 ```javascript
-const parser = require('http-cookie')
+const parser = require('http-cookie-manager')
 
 // Let us assume these are actually set
 let request
