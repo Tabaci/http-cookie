@@ -94,8 +94,34 @@ describe('CookieManager', function () {
 				'name=val', 
 				'test=hey; Path=/'
 			])
+		})
+		
+		it('should work without cookies', function () {
+			let cookieManager = new CookieManager()
 			
-			// TODO: function stub
+			expect(cookieManager.createHeaders()).to.deep.equal([])
+		})
+	})
+	
+	describe('#setHeaders', function () {
+		it('should, given a http.ServerResponse, set the Set-Cookie headers', function () {
+			let cookieManager = new CookieManager()
+			cookieManager.setCookie(new Cookie('name', 'val'))
+			cookieManager.setCookie(new Cookie('name2', 'val2'))
+			
+			cookieManager.setHeaders({
+				setHeader(name, values) {
+					expect(name).to.equal('Set-Cookie')
+				}
+			})
+		})
+		
+		it('should throw an error if response is not valid', function () {
+			let cookieManager = new CookieManager()
+			
+			expect(() => {
+				cookieManager.setHeaders(null)
+			}).to.throw(errors.responseMustBeServerResponse())
 		})
 	})
 })
