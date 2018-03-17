@@ -1,5 +1,6 @@
 <p align="center">
-[![Build Status](https://travis-ci.org/Tabaci/http-cookie.svg?branch=master)](https://travis-ci.org/Tabaci/http-cookie) [![codecov](https://codecov.io/gh/Tabaci/http-cookie/branch/master/graph/badge.svg)](https://codecov.io/gh/Tabaci/http-cookie)
+<a href="https://travis-ci.org/Tabaci/http-cookie"><img src="https://travis-ci.org/Tabaci/http-cookie.svg?branch=master"></a>
+<a href="https://codecov.io/gh/Tabaci/http-cookie"><img src="https://codecov.io/gh/Tabaci/http-cookie/branch/master/graph/badge.svg" /></a>
 </p>
 
 # http-cookie
