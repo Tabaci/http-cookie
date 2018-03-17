@@ -4,13 +4,14 @@
   "description": "Highly tested. Parses cookies, then stores them. Provides formatting for response.",
   "main": "lib/cookie-parser.js",
   "scripts": {
-    "coverage": "nyc mocha",
-    "test": "mocha"
+    "coverage": "nyc node_modules/mocha/bin/mocha",
+    "test": "node node_modules/mocha/bin/mocha"
   },
   "author": "Alexander Hållenius",
   "license": "MIT",
   "devDependencies": {
     "chai": "^4.1.2",
+    "mocha": "^5.0.4",
     "mock-req": "^0.2.0",
     "nyc": "^11.6.0"
   },

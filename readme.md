@@ -105,8 +105,9 @@ cookie.setHttpOnly(true)
 One of two strings: `strict` or `lax`. Set to `null` to toggle off.
 
 ```javascript
-cookie.setSameSite('lAX')
-cookie.setSameSite('lax')
+// Not case sensitive (case insensitive)
+cookie.setSameSite('laX')
+cookie.setSameSite('sTriCt')
 ```
 
 ### Accessing Cookies
