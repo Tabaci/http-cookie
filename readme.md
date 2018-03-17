@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/Tabaci/http-cookie.svg?branch=master)](https://travis-ci.org/Tabaci/http-cookie)[![codecov](https://codecov.io/gh/Tabaci/http-cookie/branch/master/graph/badge.svg)](https://codecov.io/gh/Tabaci/http-cookie)
+
 # http-cookie
 
 This *npm* module parses a cookie string from either a request or a plain string 
