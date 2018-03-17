@@ -57,6 +57,14 @@ describe('Cookie', function () {
 			expect(result._expires).to.be.null
 		})
 		
+		it('should set the _modified flag when called', function () {
+			let testCookie = new Cookie('name', 'value')
+			
+			testCookie.setExpires(new Date())
+			
+			expect(testCookie.isModified()).to.equal(true)
+		})
+		
 		it('should return the cookie itself for chaining', function () {
 			expect(cookie.setExpires(new Date())).to.equal(cookie)
 		})
@@ -81,6 +89,14 @@ describe('Cookie', function () {
 			expect(result._maxAge).to.be.null
 		})
 		
+		it('should set the _modified flag when called', function () {
+			let testCookie = new Cookie('name', 'value')
+			
+			testCookie.setMaxAge(200)
+			
+			expect(testCookie.isModified()).to.equal(true)
+		})
+		
 		it('should return the cookie itself for chaining', function () {
 			expect(cookie.setMaxAge(2)).to.equal(cookie)
 		})
@@ -100,13 +116,21 @@ describe('Cookie', function () {
 		let cookie = new Cookie('name', 'value')
 		
 		it('should set the domain directive of the cookie', function () {
-			cookie.setDomain('www.example.com')
+			cookie.setDomain('example.com')
 			
 			expect(cookie._domain).to.not.be.null
 			
 			cookie.setDomain(null)
 			
 			expect(cookie._domain).to.be.null
+		})
+		
+		it('should set the _modified flag when called', function () {
+			let testCookie = new Cookie('name', 'value')
+			
+			testCookie.setDomain('example.com')
+			
+			expect(testCookie.isModified()).to.equal(true)
 		})
 		
 		it('should return the cookie itself for chaining', function () {
@@ -133,6 +157,14 @@ describe('Cookie', function () {
 			expect(cookie._path).to.be.null
 		})
 		
+		it('should set the _modified flag when called', function () {
+			let testCookie = new Cookie('name', 'value')
+			
+			testCookie.setPath('/')
+			
+			expect(testCookie.isModified()).to.equal(true)
+		})
+		
 		it('should return the cookie itself for chaining', function () {
 			expect(cookie.setPath('/')).to.equal(cookie)
 		})
@@ -150,6 +182,14 @@ describe('Cookie', function () {
 		it('should set the secure directive of the cookie', function () {
 			expect(cookie.setSecure(true)._secure).to.equal(true)
 			expect(cookie.setSecure(false)._secure).to.equal(false)
+		})
+		
+		it('should set the _modified flag when called', function () {
+			let testCookie = new Cookie('name', 'value')
+			
+			testCookie.setSecure(true)
+			
+			expect(testCookie.isModified()).to.equal(true)
 		})
 		
 		it('should return the cookie itself for chaining', function () {
@@ -171,6 +211,14 @@ describe('Cookie', function () {
 			expect(cookie.setHttpOnly(false)._httpOnly).to.equal(false)
 		})
 		
+		it('should set the _modified flag when called', function () {
+			let testCookie = new Cookie('name', 'value')
+			
+			testCookie.setHttpOnly(true)
+			
+			expect(testCookie.isModified()).to.equal(true)
+		})
+		
 		it('should return the cookie itself for chaining', function () {
 			expect(cookie.setHttpOnly(true)).to.equal(cookie)
 		})
@@ -189,6 +237,14 @@ describe('Cookie', function () {
 			expect(cookie.setSameSite('lax')._sameSite).to.equal('Lax')
 			expect(cookie.setSameSite('stricT')._sameSite).to.equal('Strict')
 			expect(cookie.setSameSite(null)._sameSite).to.be.null
+		})
+		
+		it('should set the _modified flag when called', function () {
+			let testCookie = new Cookie('name', 'value')
+			
+			testCookie.setSameSite('Lax')
+			
+			expect(testCookie.isModified()).to.equal(true)
 		})
 		
 		it('should return the cookie itself for chaining', function () {
