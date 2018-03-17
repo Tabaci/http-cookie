@@ -1,7 +1,7 @@
 {
   "name": "http-cookie",
   "version": "1.0.0",
-  "description": "Highly tested. Parses cookies, then stores them. Provides formatting for response.",
+  "description": "Parses cookies, then stores them. Provides formatting for response.",
   "main": "lib/cookie-parser.js",
   "scripts": {
     "coverage": "nyc node_modules/mocha/bin/mocha",
