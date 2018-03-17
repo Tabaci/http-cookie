@@ -1,7 +1,7 @@
 {
   "name": "http-cookie",
   "version": "1.0.0",
-  "description": "Parses cookies, then stores them. Provides formatting for response.",
+  "description": "Highly tested. Parses cookies, then stores them. Provides formatting for response header.",
   "main": "lib/cookie-parser.js",
   "scripts": {
     "coverage": "nyc node_modules/mocha/bin/mocha",
@@ -16,6 +16,16 @@
     "mock-req": "^0.2.0",
     "nyc": "^11.6.0"
   },
+  "keywords": [
+    "cookie",
+    "parser",
+    "manager",
+    "handler",
+    "request",
+    "response",
+    "set-cookie",
+    "header"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/Tabaci/http-cookie.git"
