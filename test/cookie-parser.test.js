@@ -33,10 +33,24 @@ describe('cookie-parser', function () {
 			}).to.not.throw()
 		})
 		
-		it('should throw an error if request is not an instance of IncomingMessage', function () {
+		it('should default request if not defined', function () {
 			expect(() => {
 				parser.parseWith(null)
-			}).to.throw(errors.requestMustBeIncomingMessage())
+			}).to.not.throw()
+		})
+		
+		it('should default headers if not defined', function () {
+			expect(() => {
+				parser.parseWith({})
+			}).to.not.throw()	
+		})
+		
+		it('should default cookie string if not defined', function () {
+			expect(() => {
+				parser.parseWith({
+					headers: {}
+				})
+			}).to.not.throw()
 		})
 	})
 	
